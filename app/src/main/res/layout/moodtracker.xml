@@ -4,85 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoodTracker"
-    android:background="@drawable/bg_">
+    android:background="@drawable/bg_"
+    tools:context=".MoodTracker">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lavender"
+        app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:contentDescription="Back" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/moodTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="408dp"
         android:text="How are you feeling today? "
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
 
     <Button
         android:id="@+id/angryButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="332dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginStart="16dp"
         android:background="?selectableItemBackground"
         android:padding="4dp"
         android:text="😡"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/surpriseButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodTextView"
+        app:layout_constraintVertical_bias="0.087" />
 
     <Button
         android:id="@+id/surpriseButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="252dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginEnd="20dp"
         android:background="?selectableItemBackground"
         android:padding="4dp"
         android:text="😲"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/happyButton"
+        app:layout_constraintTop_toBottomOf="@+id/moodTextView"
+        app:layout_constraintVertical_bias="0.087" />
 
     <Button
         android:id="@+id/happyButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginBottom="304dp"
         android:background="?selectableItemBackground"
         android:padding="4dp"
         android:text="😀"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodTextView"
+        app:layout_constraintVertical_bias="0.087" />
 
     <Button
         android:id="@+id/neutralButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginStart="16dp"
         android:background="?selectableItemBackground"
         android:padding="4dp"
         android:text="😐"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/happyButton"
+        app:layout_constraintTop_toBottomOf="@+id/moodTextView"
+        app:layout_constraintVertical_bias="0.087" />
 
     <Button
         android:id="@+id/sadButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginEnd="16dp"
         android:background="?selectableItemBackground"
         android:padding="4dp"
         android:text="😢"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/neutralButton"
+        app:layout_constraintTop_toBottomOf="@+id/moodTextView"
+        app:layout_constraintVertical_bias="0.087" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

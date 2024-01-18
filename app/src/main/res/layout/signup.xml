@@ -32,27 +32,28 @@
         android:hint="Password"
         android:inputType="textPassword" />
 
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
     <!-- Login Button -->
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonSignup"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Sign Up"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/lavender"/>
-
-    <TextView
-        android:id="@+id/signUpRedirect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/signupText"
-        android:layout_gravity="center_horizontal"
-        android:padding="8dp"
-        android:layout_marginTop="10dp"
-        android:textSize="14sp"
-        android:textAlignment="center"
-        android:textColor="@color/blue"
-        android:textStyle=""/>
 
 </LinearLayout>
